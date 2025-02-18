@@ -3,6 +3,7 @@ export interface Product {
   name: string;
   category: string;
   price: number;
+  discount?: number;
   image: string;
   description: string;
 }
@@ -12,7 +13,8 @@ export const products: Product[] = [
     id: 1,
     name: "Fresh Tomatoes",
     category: "Vegetables",
-    price: 2.5,
+    price: 240,
+    discount: 10,
     image: "/images/tomatoes.jpg",
     description: "Freshly harvested tomatoes from local farms.",
   },
@@ -20,7 +22,8 @@ export const products: Product[] = [
     id: 2,
     name: "Organic Eggs",
     category: "Eggs",
-    price: 4.0,
+    price: 390,
+    discount: 20,
     image: "/images/eggs.jpg",
     description: "Organic eggs from free-range chickens.",
   },
@@ -28,7 +31,7 @@ export const products: Product[] = [
     id: 3,
     name: "Live Goat",
     category: "Livestock",
-    price: 200.0,
+    price: 18000.0,
     image: "/images/goat.jpg",
     description: "Healthy live goat for sale.",
   },
