@@ -44,10 +44,13 @@ export default function FeaturedProducts({ products }: FeaturedProductsProps) {
           return (
             <SwiperSlide key={product.id}>
               <div className="bg-white rounded-lg shadow-md overflow-hidden flex">
-                <img
+                <Image
                   src={product.image}
                   alt={product.name}
-                  className="w-1/2 h-64 object-cover"
+                  width={300}
+                  height={250}
+                  className="w-1/3 h-48 object-cover rounded-lg"
+                  priority
                 />
                 <div className="w-1/2 p-4">
                   <h3 className="text-xl font-semibold text-primary-dark">
