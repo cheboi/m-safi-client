@@ -17,7 +17,7 @@ export default function Sidebar() {
           <li key={category.id} className="mb-2">
             <Link
               href={`/category/${category.slug}`}
-              className="hover:text-secondary-light"
+              className="hover:text-secondary-light block py-2"
             >
               {category.name}
             </Link>
