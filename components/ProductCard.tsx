@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { Product } from "@/data/products";
 import { getDiscountedPrice } from "@/utils/price";
 
@@ -10,10 +12,13 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
-      <img
+      <Image
         src={product.image}
         alt={product.name}
-        className="w-full h-48 object-cover"
+        width={300}
+        height={200}
+        className=" h-48 object-cover"
+        priority
       />
       <div className="p-4">
         <h2 className="text-xl font-semibold text-primary-dark">
