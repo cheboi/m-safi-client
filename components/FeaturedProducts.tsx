@@ -35,7 +35,7 @@ export default function FeaturedProducts({ products }: FeaturedProductsProps) {
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         className="w-full max-w-5xl px-4"
       >
-        {products.map((product) => {
+        {filteredProducts.map((product) => {
           const discountedPrice = getDiscountedPrice(
             product.price,
             product.discount
