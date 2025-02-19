@@ -52,14 +52,14 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    name: "Live Boer Goat",
+    name: "Live Alpine Goat",
     category: "Livestock",
     subcategory: "Goats",
     price: 20000,
     image: "/images/goat.jpg",
     stock: 10,
     description:
-      "Healthy live Boer goat for farming or meat production. Vaccinated and well-fed.",
+      "Healthy live Alpin goat for farming or Milk production. Vaccinated and well-fed.",
     seller: {
       name: "Safari Livestock",
       location: "Kisumu, Kenya",

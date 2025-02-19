@@ -35,7 +35,7 @@ export default function FeaturedProducts({ products }: FeaturedProductsProps) {
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         className="w-full max-w-5xl px-4"
       >
-        {filteredProducts.map((product) => {
+        {products.map((product) => {
           const discountedPrice = getDiscountedPrice(
             product.price,
             product.discount
@@ -43,27 +43,24 @@ export default function FeaturedProducts({ products }: FeaturedProductsProps) {
 
           return (
             <SwiperSlide key={product.id}>
-              <div className="bg-white rounded-lg shadow-lg flex flex-row items-center p-4">
-                <Image
+              <div className="bg-white rounded-lg shadow-md overflow-hidden flex">
+                <img
                   src={product.image}
                   alt={product.name}
-                  width={250}
-                  height={250}
-                  className="w-1/3 h-48 object-cover rounded-lg"
-                  priority
+                  className="w-1/2 h-64 object-cover"
                 />
-                <div className="w-2/3 pl-4">
+                <div className="w-1/2 p-4">
                   <h3 className="text-xl font-semibold text-primary-dark">
                     {product.name}
                   </h3>
-                  <p className="text-gray-600 mt-1">{product.description}</p>
+                  <p className="text-gray-600 mt-2">{product.description}</p>
                   <div className="mt-2">
                     {product.discount && (
                       <p className="text-sm text-gray-500 line-through">
                         KSh {product.price.toFixed(2)}
                       </p>
                     )}
-                    <p className="text-secondary-dark font-bold text-lg">
+                    <p className="text-secondary-dark font-bold">
                       KSh {discountedPrice.toFixed(2)}
                       {product.discount && (
                         <span className="ml-2 text-sm bg-secondary-light text-white px-2 py-1 rounded">
