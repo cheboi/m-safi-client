@@ -2,18 +2,20 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Product } from "@/data/products";
+import { Product } from "@/app/data/products";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
 import { getDiscountedPrice } from "@/utils/price";
+import { useCart } from "@/app/context/CartContext";
 
 interface FeaturedProductsProps {
   products: Product[];
 }
 
 export default function FeaturedProducts({ products }: FeaturedProductsProps) {
+  const { addToCart } = useCart();
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -72,7 +74,10 @@ export default function FeaturedProducts({ products }: FeaturedProductsProps) {
                       )}
                     </p>
                   </div>
-                  <button className="mt-4 bg-primary-dark text-white px-4 py-2 rounded hover:bg-primary-light">
+                  <button
+                    onClick={() => addToCart(product)}
+                    className="mt-4 bg-primary-dark text-white px-4 py-2 rounded hover:bg-primary-light"
+                  >
                     Add to Cart
                   </button>
                 </div>

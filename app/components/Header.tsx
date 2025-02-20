@@ -1,6 +1,11 @@
+"use client";
+
 import Link from "next/link";
+import { useCart } from "@/app/context/CartContext";
 
 export default function Header() {
+  const { cart } = useCart();
+
   return (
     <header className="bg-primary-dark text-white p-4">
       <div className="container mx-auto flex justify-between items-center">
@@ -14,7 +19,7 @@ export default function Header() {
             </li>
             <li>
               <Link href="/cart" className="hover:text-secondary-light">
-                Cart
+                Cart ({cart.length})
               </Link>
             </li>
           </ul>

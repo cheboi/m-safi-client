@@ -1,13 +1,17 @@
+"use client";
+
 import Image from "next/image";
 
-import { Product } from "@/data/products";
+import { Product } from "@/app/data/products";
 import { getDiscountedPrice } from "@/utils/price";
+import { useCart } from "@/app/context/CartContext";
 
 interface ProductCardProps {
   product: Product;
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
+  const { addToCart } = useCart();
   const discountedPrice = getDiscountedPrice(product.price, product.discount);
 
   return (
@@ -50,7 +54,10 @@ export default function ProductCard({ product }: ProductCardProps) {
           {product.seller.location}
         </p>
 
-        <button className="mt-4 bg-secondary-light text-white px-4 py-2 rounded hover:bg-secondary-dark w-full">
+        <button
+          onClick={() => addToCart(product)}
+          className="mt-4 bg-secondary-light text-white px-4 py-2 rounded hover:bg-secondary-dark w-full"
+        >
           Add to Cart
         </button>
       </div>

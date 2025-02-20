@@ -1,9 +1,9 @@
-import { products } from "@/data/products";
-import ProductCard from "@/components/ProductCard";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Sidebar from "@/components/Sidebar";
-import FeaturedProducts from "@/components/FeaturedProducts";
+import { products } from "@/app/data/products";
+import ProductCard from "@/app/components/ProductCard";
+import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
+import Sidebar from "@/app/components/Sidebar";
+import FeaturedProducts from "@/app/components/FeaturedProducts";
 
 export default function Home() {
   const featuredProducts = products.filter(
