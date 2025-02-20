@@ -3,6 +3,7 @@
 import { useCart } from "@/app/context/CartContext";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
+import Image from "next/image";
 
 export default function CartPage() {
   const { cart, removeFromCart, clearCart } = useCart();
@@ -24,10 +25,13 @@ export default function CartPage() {
                   key={item.id}
                   className="bg-white p-4 rounded-lg shadow-md flex"
                 >
-                  <img
+                  <Image
                     src={item.image}
                     alt={item.name}
+                    width={300}
+                    height={200}
                     className="w-1/3 h-32 object-cover"
+                    priority
                   />
                   <div className="w-2/3 p-4">
                     <h2 className="text-xl font-semibold text-primary-dark">

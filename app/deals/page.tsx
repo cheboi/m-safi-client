@@ -13,7 +13,7 @@ export default function DealsPage() {
       <Header />
       <main className="container mx-auto p-4">
         <h1 className="text-3xl font-bold text-primary-dark mb-6">
-          🔥 Today's Deals
+          🔥 Today&apos;s Deals
         </h1>
         {deals.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
