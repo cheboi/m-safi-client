@@ -2,11 +2,13 @@
 
 import Link from "next/link";
 import { useCart } from "@/app/context/CartContext";
+import SubHeader from "./SubHeader";
 
 export default function Header() {
   const { cart } = useCart();
 
   return (
+    <>
     <header className="bg-primary-dark text-white p-4">
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-2xl font-bold">M-Safi</h1>
@@ -26,5 +28,7 @@ export default function Header() {
         </nav>
       </div>
     </header>
+    <SubHeader /> 
+    </>
   );
 }

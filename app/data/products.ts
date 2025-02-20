@@ -72,7 +72,7 @@ export const products: Product[] = [
     category: "Grains & Cereals",
     subcategory: "Cereals",
     price: 2800,
-    discount: 5,
+    discount: 20,
     image: "/images/maize.jpg",
     stock: 500,
     description:
