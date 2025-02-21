@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { ShoppingCart } from "lucide-react";
 import { useCart } from "@/app/context/CartContext";
 import SubHeader from "./SubHeader";
 
@@ -21,7 +22,12 @@ export default function Header() {
             </li>
             <li>
               <Link href="/cart" className="hover:text-secondary-light">
-                Cart ({cart.length})
+              <ShoppingCart size={20} />
+              {cart.length > 0 && (
+                    <span className="absolute top-1 right-2 bg-red-500 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">
+                      {cart.length}
+                    </span>
+                  )}
               </Link>
             </li>
           </ul>
