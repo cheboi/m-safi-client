@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
+import Link from "next/link";
 import { Product } from "@/app/data/products";
 import { getDiscountedPrice } from "@/utils/price";
 import { useCart } from "@/app/context/CartContext";
@@ -16,17 +16,24 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
-      <Image
-        src={product.image}
-        alt={product.name}
-        width={300}
-        height={200}
-        className=" h-48 object-cover"
-        priority
-      />
+      <Link href={`/products/${product.id}`} className="block">
+        <div className="relative w-full h-48">
+          <Image
+            src={product.image}
+            alt={product.name}
+            layout="fill"
+            objectFit="cover"
+            className="rounded-t-lg"
+            priority
+          />
+        </div>
+      </Link>
+
       <div className="p-4">
         <h2 className="text-xl font-semibold text-primary-dark">
-          {product.name}
+          <Link href={`/products/${product.id}`} className="hover:underline">
+            {product.name}
+          </Link>
         </h2>
         <p className="text-gray-600 text-sm">{product.description}</p>
 

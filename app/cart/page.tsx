@@ -20,7 +20,7 @@ export default function CartPage() {
           categories.includes(product.category) &&
           !cart.some((c) => c.id === product.id)
       );
-      setRecommended(filteredProducts.slice(0, 3)); // Show only 3 recommendations
+      setRecommended(filteredProducts.slice(0, 3));
     }
   }, [cart]);
 
