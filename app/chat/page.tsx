@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import io from "socket.io-client";
-import { Send, MessageCircle, User } from "lucide-react";
+import { Send, MessageCircle } from "lucide-react";
 
 const socket = io("http://localhost:5000/api/chat");
 
