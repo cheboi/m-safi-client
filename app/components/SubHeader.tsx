@@ -7,7 +7,7 @@ export default function SubHeader() {
         <Link href="/deals" className="hover:text-primary-dark">
           Today&apos;s Deals
         </Link>
-        <Link href="#" className="hover:text-primary-dark">
+        <Link href="/customer-service" className="hover:text-primary-dark">
           Customer Service
         </Link>
         <Link href="#" className="hover:text-primary-dark">

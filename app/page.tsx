@@ -4,6 +4,7 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import Sidebar from "@/app/components/Sidebar";
 import FeaturedProducts from "@/app/components/FeaturedProducts";
+import SubHeader from "@/app/components/SubHeader";
 
 export default function Home() {
   const featuredProducts = products.filter(
@@ -13,6 +14,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-primary-light">
       <Header />
+    <SubHeader /> 
+
       <div className="flex">
         <Sidebar />
         <main className="flex-1 p-4">

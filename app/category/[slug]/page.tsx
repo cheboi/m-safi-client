@@ -4,6 +4,7 @@ import { useParams } from "next/navigation";
 import { products } from "@/app/data/products";
 import ProductCard from "@/app/components/ProductCard";
 import Header from "@/app/components/Header";
+import SubHeader from "@/app/components/SubHeader";
 import Footer from "@/app/components/Footer";
 import Sidebar from "@/app/components/Sidebar";
 
@@ -17,6 +18,7 @@ export default function CategoryPage() {
   return (
     <div className="min-h-screen bg-primary-light">
       <Header />
+      <SubHeader />
       <div className="flex">
         <Sidebar />
         <main className="flex-1 p-4">
