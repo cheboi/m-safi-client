@@ -136,7 +136,7 @@ export default function CustomerServicePage() {
               <h3 className="mt-2 font-semibold">Live Chat</h3>
               <p className="text-sm">Chat with a support agent</p>
               <button className="mt-2 px-4 py-2 bg-secondary-light text-white rounded hover:bg-secondary-dark">
-                Start Chat
+                <a href="/chat"> Start Chat</a>
               </button>
             </div>
           </div>
