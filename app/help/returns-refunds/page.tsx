@@ -28,7 +28,7 @@ export default function ReturnsRefunds() {
               <ShieldCheck size={24} /> Our Return Policy
             </h2>
             <p className="text-gray-600 mt-2">
-              If you're not satisfied with your purchase, you can return it
+              If you&apos;re not satisfied with your purchase, you can return it
               within <span className="font-bold">14 days</span> of delivery.
               Items must be unused, in their original packaging, and accompanied
               by a receipt or proof of purchase.
