@@ -67,7 +67,7 @@ export default function CustomerServicePage() {
               <RefreshCw size={40} className="mx-auto text-primary-dark" />
               <h3 className="mt-2 font-semibold">Returns & Refunds</h3>
               <p className="text-sm">Request returns and refunds.</p>
-              <Link href="/help/returns" className="text-blue-600 text-sm">
+              <Link href="/help/returns-refunds" className="text-blue-600 text-sm">
                 Learn More →
               </Link>
             </div>

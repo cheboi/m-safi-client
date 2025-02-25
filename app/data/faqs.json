@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Can I return an item if I opened it?",
+    "answer": "Unfortunately, we cannot accept returns of used or opened products unless defective."
+  },
+  {
+    "question": "What if my item is damaged?",
+    "answer": "Contact us immediately with photos of the damage, and we will provide a replacement or refund."
+  },
+  {
+    "question": "How do I track my return?",
+    "answer": "We will provide you with a tracking number once the return process has been initiated."
+  },
+  {
+    "question": "How long does it take to process a refund?",
+    "answer": "Refunds are usually processed within 5-7 business days after receiving the returned item."
+  },
+  {
+    "question": "Can I return an item without the original receipt?",
+    "answer": "A proof of purchase is required for all returns. If you don’t have a receipt, please contact customer support."
+  }
+]
