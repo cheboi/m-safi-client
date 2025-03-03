@@ -21,7 +21,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<{ name: string; role: string } | null>(null);
 
   const login = async (email: string, password: string) => {
-    const { data } = await axios.post("/api/auth/login", { email, password });
+    const { data } = await axios.post("http://localhost:5000/api/auth/login", {
+      email,
+      password,
+    });
     setUser({ name: data.name, role: data.role });
   };
 
@@ -31,12 +34,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     password: string,
     role: string
   ) => {
-    const { data } = await axios.post("localhost:5000/api/auth/register", {
-      name,
-      email,
-      password,
-      role,
-    });
+    const { data } = await axios.post(
+      "http://localhost:5000/api/auth/register",
+      {
+        name,
+        email,
+        password,
+        role,
+      }
+    );
     setUser({ name: data.name, role: data.role });
   };
 
