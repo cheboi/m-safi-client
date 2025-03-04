@@ -18,7 +18,7 @@ export default function SearchResults() {
       return;
     }
 
-    // use fuzzy search
+    // use fuse search
     const fuse = new Fuse(products, {
       keys: ["name"],
       threshold: 0.3,
