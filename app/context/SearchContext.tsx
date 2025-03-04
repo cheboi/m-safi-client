@@ -4,7 +4,9 @@ import { createContext, useContext, useState } from "react";
 
 const SearchContext = createContext({
   searchQuery: "",
-  setSearchQuery: (_query: string) => {},
+  setSearchQuery: (query: string) => {
+    console.log(query)
+  },
 });
 
 export function SearchProvider({ children }: { children: React.ReactNode }) {
