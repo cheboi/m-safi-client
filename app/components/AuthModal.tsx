@@ -33,9 +33,10 @@ export default function AuthModal({ type, onClose }: AuthModalProps) {
       } else {
         await register(form.name, form.email, form.password, form.role);
       }
-      onClose(); 
+      onClose();
     } catch (err) {
       setError("Authentication failed. Please try again.");
+      console.error(err);
     }
   };
 
