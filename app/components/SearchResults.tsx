@@ -30,7 +30,7 @@ export default function SearchResults() {
 
   return (
     <div className="absolute bg-white text-black w-1/3 mt-2 rounded shadow-lg z-10">
-      {results.length === 0 ? (
+      {results.length === 1 ? (
         <p className="p-2 text-gray-500">No results found</p>
       ) : (
         results.map((product) => (

@@ -2,11 +2,18 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ShoppingCart, MessageCircle, UserPlus, User } from "lucide-react";
+import {
+  ShoppingCart,
+  MessageCircle,
+  UserPlus,
+  User,
+  Search,
+} from "lucide-react";
 import { useCart } from "@/app/context/CartContext";
 import { useAuth } from "@/app/context/AuthContext";
 import AuthModal from "./AuthModal";
 import { useSearch } from "@/app/context/SearchContext";
+import SearchResults from "@/app/components/SearchResults";
 
 export default function Header() {
   const { cart } = useCart();
@@ -29,6 +36,7 @@ export default function Header() {
               className="w-full p-2 text-black rounded"
             />
             <Search className="absolute right-2 top-2 text-gray-500" />
+            <SearchResults /> 
           </div>
 
           <nav>
