@@ -6,10 +6,12 @@ import { ShoppingCart, MessageCircle, UserPlus, User } from "lucide-react";
 import { useCart } from "@/app/context/CartContext";
 import { useAuth } from "@/app/context/AuthContext";
 import AuthModal from "./AuthModal";
+import { useSearch } from "@/app/context/SearchContext";
 
 export default function Header() {
   const { cart } = useCart();
   const { user, logout } = useAuth();
+  const { searchQuery, setSearchQuery } = useSearch();
   const [modalType, setModalType] = useState<"login" | "signup" | null>(null);
 
   return (
@@ -17,6 +19,18 @@ export default function Header() {
       <header className="bg-primary-dark text-white p-4">
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-2xl font-bold">M-Safi</h1>
+          {/* Search Bar */}
+          <div className="relative w-1/3">
+            <input
+              type="text"
+              placeholder="Search products..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full p-2 text-black rounded"
+            />
+            <Search className="absolute right-2 top-2 text-gray-500" />
+          </div>
+
           <nav>
             <ul className="flex space-x-4">
               <li>
